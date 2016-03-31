@@ -17,20 +17,16 @@ public class Fibonacci {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        int a=0,b=0,hasil=1,hasil_jumlah=0;
         Scanner s = new Scanner(System.in);
 	System.out.print("Masukkan deret fibonacci : ");
 	int n = s.nextInt();
-	for(int i=1;i<=n;i++)
-            System.out.print(fibo(i) + " ");
-            System.out.println();
-    }
-
-    private static int fibo(int n){
-        int f;
-        if(n==1 || n==2)
-	f=1;
-	else
-	f = fibo(n-1) + fibo(n-2);
-	return f;
+	for(int i=1;i<=n;i++){
+            a=b;
+            b=hasil;
+            hasil_jumlah=hasil_jumlah+hasil;
+            hasil=a+b;
+        }
+        System.out.println(hasil_jumlah);
     }
 }
